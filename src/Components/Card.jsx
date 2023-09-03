@@ -6,7 +6,7 @@ const Card = ({ word, key }) => {
         <div key={key} className="bg-white mb-10 p-6 rounded-lg box-shadow" >
             <h2 className="font-bold text-2xl">{word.word}</h2>
             {
-                word.phonetics.map((aud, idx) => (
+                word.phonetics?.map((aud, idx) => (
                     <div key={idx} className="mb-4">
                         <p>{aud.text}</p>
                         <audio controls>
@@ -19,7 +19,7 @@ const Card = ({ word, key }) => {
             }
                 <p>{word.phonetic}</p>
             {
-                word.meanings.map((mean) => (
+                word.meanings?.map((mean) => (
                     <div className="mb-4">
                         <h3 className="font-bold text-lg">{mean.partOfSpeech}</h3>
                         {
